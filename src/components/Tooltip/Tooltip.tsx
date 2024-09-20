@@ -37,7 +37,6 @@ const Tooltip: FC<TooltipProps> = ({ tooltipData, zoom }) => {
     if (!tooltipRef.current) return;
 
     const { width: tooltipWidth } = tooltipRef.current.getBoundingClientRect();
-
     let xOffset;
     switch (zoom) {
       case 2:

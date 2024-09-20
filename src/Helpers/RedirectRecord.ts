@@ -40,3 +40,43 @@ export function redirectToRecord(id: string): void {
     console.error('Xrm object is not available.');
   }
 }
+export function NavigateSalesOrder(id: string|undefined): void {
+  if (typeof Xrm !== 'undefined' && Xrm.Navigation && id) {
+    const recordId: string = id;
+    const entityName: string = "avpx_salesorders";
+    const url: string = Xrm.Navigation.openForm({
+      entityName: entityName,
+      entityId: recordId
+    });
+    Xrm.Navigation.openForm(url).then(
+      function () {
+        console.log('Form opened successfully');
+      },
+      function (error: any) {
+        console.log('Error opening form: ' + error.message);
+      }
+    );
+  } else {
+    console.error('Xrm object is not available.');
+  }
+}
+export function NavigateRentalOrder(id: string |undefined): void {
+  if (typeof Xrm !== 'undefined' && Xrm.Navigation && id) {
+    const recordId: string = id;
+    const entityName: string = "avpx_rentalreservation";
+    const url: string = Xrm.Navigation.openForm({
+      entityName: entityName,
+      entityId: recordId
+    });
+    Xrm.Navigation.openForm(url).then(
+      function () {
+        console.log('Form opened successfully');
+      },
+      function (error: any) {
+        console.log('Error opening form: ' + error.message);
+      }
+    );
+  } else {
+    console.error('Xrm object is not available.');
+  }
+}

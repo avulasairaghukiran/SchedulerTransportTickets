@@ -14,6 +14,7 @@ export const StyledTileWrapper = styled.button`
   color: ${({ theme }) => theme.colors.textPrimary};
   width: 100%;
   cursor: pointer;
+  transition: all .5s ease-in-out;
 `;
 
 export const StyledTextWrapper = styled.div`

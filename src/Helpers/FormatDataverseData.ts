@@ -35,6 +35,7 @@ export interface Entity {
  "_avpx_salesorders_value@OData.Community.Display.V1.FormattedValue":string;
  "_avpx_salesorders_value":string;
  "avpx_deliverydateto": string;
+"avpx_deliverydatefrom@OData.Community.Display.V1.FormattedValue": string;
  "_avpx_rentalorder_value@OData.Community.Display.V1.FormattedValue":string;
  "_avpx_rentalorder_value": string,
  "avpx_transporttype@OData.Community.Display.V1.FormattedValue": string,
@@ -54,6 +55,7 @@ export interface Job {
   rentalorder:string;
   rentalorderid:string;
   transporttype:string;
+  formateddeliverydate:string;
 }
 
 function transformData(entities: Entity[]): SchedulerRow[] {
@@ -76,6 +78,7 @@ function transformData(entities: Entity[]): SchedulerRow[] {
       deliverydateto:entity["avpx_deliverydateto"],
       rentalorder:entity["_avpx_rentalorder_value@OData.Community.Display.V1.FormattedValue"],
       rentalorderid:entity["_avpx_rentalorder_value"],
+      formateddeliverydate:entity["avpx_deliverydatefrom@OData.Community.Display.V1.FormattedValue"],
       transporttype:entity["avpx_transporttype@OData.Community.Display.V1.FormattedValue"],
     };
 

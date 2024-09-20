@@ -102,7 +102,7 @@ export type SchedulerProjectData = {
    * Title of item
    */
   title: string;
- bgColor: string;
+  bgColor: string;
   status:string;
   tickettype?:string;
   salesorder?:string;
@@ -111,6 +111,7 @@ export type SchedulerProjectData = {
   rentalorder?:string;
   rentalorderid?:string;
   transporttype?:string;
+  formateddeliverydate?:string;
   
 
 };
