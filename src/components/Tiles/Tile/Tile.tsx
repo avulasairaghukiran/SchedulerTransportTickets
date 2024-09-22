@@ -48,7 +48,7 @@ const Tile: FC<TileProps> = ({ row, data, zoom, onTileClick }) => {
         {visible && (
             <div
             className={`bg-black text-white absolute p-3 -top-${
-              data.salesorder && data.rentalorder && data.formateddeliverydate ? "20" : "16"
+              data.salesorder && data.rentalorder && data.formateddeliverydate ? "20" : "20"
             } z-50 rounded-md text-xs w-60 flex flex-col gap-1`}
             style={{ backgroundColor: "rgb(0,55,92)" }}
             >
